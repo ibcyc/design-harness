@@ -1,0 +1,26 @@
+{
+  "name": "hackathon-design-harness",
+  "version": "0.2.0",
+  "license": "MIT",
+  "description": "A design harness for Claude and Codex with integrated design skills, screenshot review, and browser checks.",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.11"
+  },
+  "scripts": {
+    "setup": "node scripts/setup.mjs",
+    "skills:check": "node scripts/setup.mjs --verify",
+    "design:research": "node scripts/design-research.mjs",
+    "demo": "node scripts/serve.mjs",
+    "check": "node scripts/check.mjs",
+    "fault:on": "node scripts/fault.mjs on",
+    "fault:off": "node scripts/fault.mjs off",
+    "report": "node scripts/serve.mjs reports 4174"
+  },
+  "dependencies": {
+    "axe-core": "4.14.0",
+    "gsap": "3.15.1",
+    "playwright": "1.65.0"
+  }
+}

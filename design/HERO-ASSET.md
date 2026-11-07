@@ -1,0 +1,11 @@
+# 專屬共同工作桌插畫
+
+來源：本次使用內建 imagegen 工具生成，並保留原始透明 PNG；未使用 CLI/API fallback。
+
+正式資產：`demo/assets/illustration/shared-table.png`。圖片只負責概念插畫；姓名、按鈕、文字與表單均為 HTML。它是線上協作的視覺比喻，不是活動實景照片或參與者紀錄。
+
+最終生成提示詞：
+
+```text
+Use case: stylized-concept. Asset type: custom hero illustration for a refined Traditional Chinese community maker event website, Build Night. Create ONE polished editorial 3D papercraft/clay hybrid illustration, landscape 3:2 composition, transparent background. Subject: a single inviting communal creative worktable seen from a slightly elevated 3/4 isometric view. A rounded pale lavender table supports three small open laptops with abstract nontext prototype interface shapes, a sketchbook with simple diagram lines, one warm yellow pencil cup, and a modest curved desk lamp. Two understated sculptural adult maker figures sit at the back left and back right, collaborating, their simplified forms sophisticated and friendly rather than toy-like; one wears muted blue, one muted lavender. The most important narrative object is an EMPTY COBALT-BLUE CHAIR in the FRONT RIGHT with a small blank warm-yellow name card resting at that place on the tabletop, clearly inviting the viewer to join. Show the full chair, table legs, and an intimate work-in-progress arrangement. This is a symbolic shared workspace for an ONLINE collaborative workshop, not an office-stock-photo scene. Color palette rigorously limited: cloudy blue #EEF3F7, ink blue #18334C, cobalt #2659DD, lavender #DBD4EF, soft yellow #F5DF7A, warm white. Materials: tactile matte painted paper and smooth ceramic-like surfaces with extremely subtle grain; rounded but precise crafted edges. Lighting: large soft studio key from top left, restrained grounding shadows, clean sophisticated render. Composition: entire single sculptural group centered, airy safe margins on all sides, tight enough to read on a 350px mobile display, no scene background, no ground plane, preserve alpha. The empty chair must be readable in silhouette. NO text, letters, numbers, logos, icons floating in air, charts, gradients, UI screenshots, decorative confetti, plants, extra props, photorealism, or watermarks. This image will sit below a real HTML heading; do not render any typography or interface.
+```

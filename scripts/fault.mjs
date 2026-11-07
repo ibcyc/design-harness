@@ -1,0 +1,10 @@
+import { readFile, writeFile } from 'node:fs/promises';
+import { resolve } from 'node:path';
+const mode = process.argv[2];
+if (!['on','off'].includes(mode)) throw new Error('Use fault:on or fault:off');
+const file = resolve(import.meta.dirname, '../demo/styles.css');
+const html = await readFile(file, 'utf8');
+const rule = /\.fault-overflow\{min-width:(?:0|720)px\}/;
+if (!rule.test(html)) throw new Error('Fault rule changed. Inspect the source and merge manually.');
+await writeFile(file, html.replace(rule, `.fault-overflow{min-width:${mode === 'on' ? 720 : 0}px}`));
+console.log(`Overflow fixture ${mode}. Only applies to the URL with ?fault=overflow.`);

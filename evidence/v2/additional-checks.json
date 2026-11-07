@@ -1,0 +1,47 @@
+[
+  {
+    "width": 320,
+    "normalMotion": true,
+    "layout": {
+      "client": 320,
+      "scroll": 320
+    },
+    "emptyFormErrors": true,
+    "errorSummaryFocus": true,
+    "errorLinkFocus": true,
+    "participantNameUpdated": true,
+    "returnToSeatLink": true,
+    "successClearedOnEdit": true,
+    "externalRequests": []
+  },
+  {
+    "width": 768,
+    "normalMotion": true,
+    "layout": {
+      "client": 768,
+      "scroll": 768
+    },
+    "emptyFormErrors": true,
+    "errorSummaryFocus": true,
+    "errorLinkFocus": true,
+    "participantNameUpdated": true,
+    "returnToSeatLink": true,
+    "successClearedOnEdit": true,
+    "externalRequests": []
+  },
+  {
+    "width": 1440,
+    "normalMotion": true,
+    "layout": {
+      "client": 1440,
+      "scroll": 1440
+    },
+    "emptyFormErrors": true,
+    "errorSummaryFocus": true,
+    "errorLinkFocus": true,
+    "participantNameUpdated": true,
+    "returnToSeatLink": true,
+    "successClearedOnEdit": true,
+    "externalRequests": []
+  }
+]

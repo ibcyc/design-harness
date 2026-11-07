@@ -1,0 +1,11 @@
+node_modules/
+reports/
+.DS_Store
+.agents/skills/
+.claude/skills/
+.harness/
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example

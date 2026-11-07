@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Build Night：把一個點子，做成今晚可以展示的作品。">
+<title>Build Night — 好點子，需要好夥伴</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">跳至主要內容</a>
+<div class="wrap">
+<header class="site-header">
+ <a class="brand" href="#" aria-label="Build Night 首頁"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Build Night</a>
+ <span class="event-label">給還在想，也想動手做的你。</span>
+ <nav class="nav" aria-label="主要導覽"><a class="agenda-link" href="#agenda">活動安排</a><a class="nav-cta" href="#register">參加活動</a></nav>
+</header>
+<main id="main">
+<section class="hero-stage" aria-labelledby="hero-title">
+ <div class="hero-copy">
+  <p class="event-line"><span>11/13（五）18:30–21:30</span><span class="dot" aria-hidden="true"></span><span>溫哥華時間 UTC−8 · 線上</span></p>
+  <h1 id="hero-title"><span>一個點子，</span><span>一桌好夥伴。</span></h1>
+  <p class="hero-description">好點子，不用一個人完成。<br>帶著還沒想完的想法來，一起做出能展示的第一版。</p>
+  <a class="primary" href="#register">留個位置給我<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+ </div>
+ <figure class="worktable table-scene" id="worktable">
+  <img class="scene-image" src="assets/illustration/shared-table.png" width="1536" height="1024" alt="共同創作的概念插畫：兩位創作者在桌邊交流，前方留著一張藍色空椅，邀請你加入。">
+  <figcaption class="seat-sign" id="hero-participant"><span class="seat-placeholder" id="participant-initial" aria-hidden="true">你</span><span class="seat-words"><span class="seat-heading" id="show-heading">這張桌子，還有你的位置。</span><span class="participant-name" data-participant-name>把名字放進來</span></span></figcaption>
+ </figure>
+ <div class="hero-bottom"><span>新手、半成品與天馬行空，都歡迎。</span></div>
+</section>
+<section class="agenda" id="agenda" aria-labelledby="agenda-title">
+ <div><p class="section-kicker">活動安排</p><h2 class="section-title" id="agenda-title">三個小時，<br>讓想法往前一步。</h2><p class="section-copy">不用先成為高手，也不用想好所有細節。把問題帶來，把第一個版本帶回去。</p></div>
+ <div class="agenda-track"><span class="agenda-progress" aria-hidden="true"></span><ol class="agenda-list">
+  <li><time class="agenda-time">18:30</time><div><h3>找到你的切入點</h3><p>聊聊你想做什麼，找到夥伴，選一件今晚能完成的事。</p></div></li>
+  <li><time class="agenda-time">19:00</time><div><h3>把第一版做出來</h3><p>一起設計、開發、測試。卡住的地方，拿出來一起想。</p></div></li>
+  <li><time class="agenda-time">21:00</time><div><h3>分享你的進展</h3><p>展示可以操作的成果，交換回饋，帶走清楚的下一步。</p></div></li>
+ </ol></div>
+</section>
+<section class="registration" id="register" aria-labelledby="register-title">
+ <div><p class="section-kicker">好，就差你了。</p><h2 class="section-title" id="register-title">保留你的席位</h2><p class="section-copy">不論是第一個作品，還是一直放著的 side project，都有一個位置留給你。</p><div class="registration-details"><span class="detail-chip">線上參與</span><span class="detail-chip">帶一台電腦</span><span class="detail-chip">新手友善</span></div><p class="join-annotation"><span lang="en">Bring your curiosity.</span>其餘的，我們一起想辦法。</p></div>
+ <div class="form-panel"><form id="registration" novalidate>
+  <div id="feedback" class="feedback" role="alert" tabindex="-1" hidden></div>
+  <div class="field"><label for="name">怎麼稱呼你</label><input id="name" name="name" autocomplete="name" required placeholder="你的名字" maxlength="80" aria-describedby="feedback"></div>
+  <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" aria-describedby="feedback"></div>
+  <button class="primary" type="submit">我要參加<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  <p class="privacy">這是互動原型，資料尚未送出或儲存。</p>
+ </form><div id="confirmation" class="confirmation" role="status" hidden><h3>報名示範完成</h3><p>你已完成這次操作，資料尚未送出或儲存。</p><div class="participant"><span class="participant-dot" aria-hidden="true"></span><span class="participant-name" data-participant-name></span><span>，一起動手做。</span></div><a class="see-place" href="#worktable">看看我的位置</a></div></div>
+</section>
+</main>
+<footer class="site-footer"><span class="footer-brand" lang="en">Make it. Together.</span><span>Build Night · 好點子，需要好夥伴。</span></footer>
+</div>
+<script src="assets/motion/gsap.min.js"></script><script src="assets/motion/ScrollTrigger.min.js"></script><script src="app.js"></script>
+</body></html>

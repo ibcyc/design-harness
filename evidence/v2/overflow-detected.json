@@ -1,0 +1,617 @@
+{
+  "runId": "2026-11-06T05-37-44-661Z-29000",
+  "url": "http://127.0.0.1:4173/?fault=overflow",
+  "startedAt": "2026-11-06T05:37:44.661Z",
+  "config": {
+    "url": "http://127.0.0.1:4173",
+    "timeoutMs": 10000,
+    "viewports": [
+      {
+        "name": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "requiredText": [
+      "Build Night",
+      "活動安排",
+      "保留你的席位"
+    ],
+    "flows": [
+      {
+        "name": "keyboard-navigation",
+        "steps": [
+          {
+            "action": "click",
+            "selector": "#name"
+          },
+          {
+            "action": "press",
+            "selector": "#name",
+            "value": "Tab"
+          },
+          {
+            "action": "expectFocused",
+            "selector": "#email"
+          },
+          {
+            "action": "press",
+            "selector": "#email",
+            "value": "Tab"
+          },
+          {
+            "action": "expectFocused",
+            "selector": "button[type=submit]"
+          }
+        ]
+      },
+      {
+        "name": "invalid-email",
+        "steps": [
+          {
+            "action": "fill",
+            "selector": "#name",
+            "value": "Demo Visitor"
+          },
+          {
+            "action": "fill",
+            "selector": "#email",
+            "value": "not-an-email"
+          },
+          {
+            "action": "click",
+            "selector": "button[type=submit]"
+          },
+          {
+            "action": "expectText",
+            "selector": "#feedback",
+            "value": "請輸入有效的 Email"
+          }
+        ]
+      },
+      {
+        "name": "registration",
+        "steps": [
+          {
+            "action": "fill",
+            "selector": "#email",
+            "value": "demo@example.com"
+          },
+          {
+            "action": "click",
+            "selector": "button[type=submit]"
+          },
+          {
+            "action": "expectVisible",
+            "selector": "#confirmation"
+          },
+          {
+            "action": "expectText",
+            "selector": "#confirmation",
+            "value": "報名示範完成"
+          }
+        ]
+      }
+    ]
+  },
+  "visualReview": "pending",
+  "status": "fail",
+  "results": [
+    {
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "checks": [
+        {
+          "name": "page-load",
+          "pass": true,
+          "detail": "HTTP 200"
+        },
+        {
+          "name": "text: Build Night",
+          "pass": true,
+          "detail": ""
+        },
+        {
+          "name": "text: 活動安排",
+          "pass": true,
+          "detail": ""
+        },
+        {
+          "name": "text: 保留你的席位",
+          "pass": true,
+          "detail": ""
+        },
+        {
+          "name": "screenshot",
+          "pass": true,
+          "detail": "desktop.png"
+        },
+        {
+          "name": "layout: initial",
+          "pass": true,
+          "detail": {
+            "width": 1440,
+            "scroll": 1440,
+            "offenders": []
+          }
+        },
+        {
+          "name": "accessibility: initial",
+          "pass": true,
+          "detail": "0 violations total; no serious/critical blockers. Review incomplete results manually."
+        },
+        {
+          "name": "flow: keyboard-navigation",
+          "pass": true,
+          "detail": "5 steps completed"
+        },
+        {
+          "name": "screenshot-flow-1",
+          "pass": true,
+          "detail": "desktop-flow-1.png"
+        },
+        {
+          "name": "flow: invalid-email",
+          "pass": true,
+          "detail": "4 steps completed"
+        },
+        {
+          "name": "screenshot-flow-2",
+          "pass": true,
+          "detail": "desktop-flow-2.png"
+        },
+        {
+          "name": "flow: registration",
+          "pass": true,
+          "detail": "4 steps completed"
+        },
+        {
+          "name": "screenshot-flow-3",
+          "pass": true,
+          "detail": "desktop-flow-3.png"
+        },
+        {
+          "name": "screenshot-after",
+          "pass": true,
+          "detail": "desktop-after.png"
+        },
+        {
+          "name": "layout: after-flows",
+          "pass": true,
+          "detail": {
+            "width": 1440,
+            "scroll": 1440,
+            "offenders": []
+          }
+        },
+        {
+          "name": "accessibility: after-flows",
+          "pass": true,
+          "detail": "0 violations total; no serious/critical blockers. Review incomplete results manually."
+        },
+        {
+          "name": "javascript-errors",
+          "pass": true,
+          "detail": "No pageerror events observed"
+        }
+      ],
+      "screenshots": [
+        "desktop.png",
+        "desktop-flow-1.png",
+        "desktop-flow-2.png",
+        "desktop-flow-3.png",
+        "desktop-after.png"
+      ],
+      "accessibility": [
+        {
+          "stage": "initial",
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "aria-prohibited-attr",
+              "impact": "serious",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-prohibited-attr?application=axeAPI",
+              "targets": [
+                [
+                  "#worktable"
+                ]
+              ]
+            },
+            {
+              "id": "color-contrast",
+              "impact": "serious",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+              "targets": [
+                [
+                  ".event-line > span:nth-child(1)"
+                ],
+                [
+                  ".event-line > span:nth-child(3)"
+                ],
+                [
+                  "#hero-title > span:nth-child(1)"
+                ],
+                [
+                  "#hero-title > span:nth-child(2)"
+                ],
+                [
+                  ".hero-description"
+                ],
+                [
+                  ".primary[href$=\"#register\"]"
+                ],
+                [
+                  ".idea-note > .note-tag"
+                ],
+                [
+                  ".idea-note > h2"
+                ],
+                [
+                  ".idea-note > p"
+                ],
+                [
+                  ".prototype-note > .note-tag"
+                ],
+                [
+                  ".prototype-note > h2"
+                ],
+                [
+                  ".prototype-note > p"
+                ],
+                [
+                  ".show-note > .note-tag"
+                ],
+                [
+                  "#participant-initial"
+                ],
+                [
+                  "#show-heading"
+                ],
+                [
+                  "#hero-participant > .participant-name[data-participant-name=\"\"]"
+                ],
+                [
+                  ".hero-bottom > span"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "stage": "after-flows",
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "aria-prohibited-attr",
+              "impact": "serious",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-prohibited-attr?application=axeAPI",
+              "targets": [
+                [
+                  "#worktable"
+                ]
+              ]
+            },
+            {
+              "id": "color-contrast",
+              "impact": "serious",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+              "targets": [
+                [
+                  ".event-line > span:nth-child(1)"
+                ],
+                [
+                  ".event-line > span:nth-child(3)"
+                ],
+                [
+                  "#hero-title > span:nth-child(1)"
+                ],
+                [
+                  "#hero-title > span:nth-child(2)"
+                ],
+                [
+                  ".hero-description"
+                ],
+                [
+                  ".primary[href$=\"#register\"]"
+                ],
+                [
+                  ".idea-note > .note-tag"
+                ],
+                [
+                  ".idea-note > h2"
+                ],
+                [
+                  ".idea-note > p"
+                ],
+                [
+                  ".prototype-note > .note-tag"
+                ],
+                [
+                  ".prototype-note > h2"
+                ],
+                [
+                  ".prototype-note > p"
+                ],
+                [
+                  ".show-note > .note-tag"
+                ],
+                [
+                  "#participant-initial"
+                ],
+                [
+                  "#show-heading"
+                ],
+                [
+                  "#hero-participant > .participant-name[data-participant-name=\"\"]"
+                ],
+                [
+                  ".hero-bottom > span"
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "checks": [
+        {
+          "name": "page-load",
+          "pass": true,
+          "detail": "HTTP 200"
+        },
+        {
+          "name": "text: Build Night",
+          "pass": true,
+          "detail": ""
+        },
+        {
+          "name": "text: 活動安排",
+          "pass": true,
+          "detail": ""
+        },
+        {
+          "name": "text: 保留你的席位",
+          "pass": true,
+          "detail": ""
+        },
+        {
+          "name": "screenshot",
+          "pass": true,
+          "detail": "mobile.png"
+        },
+        {
+          "name": "layout: initial",
+          "pass": false,
+          "detail": "{\"width\":390,\"scroll\":740,\"offenders\":[{\"tag\":\"SECTION\",\"id\":\"register\",\"className\":\"registration fault-overflow\"},{\"tag\":\"DIV\",\"id\":\"\",\"className\":\"\"},{\"tag\":\"P\",\"id\":\"\",\"className\":\"section-kicker\"},{\"tag\":\"H2\",\"id\":\"register-title\",\"className\":\"section-title\"},{\"tag\":\"DIV\",\"id\":\"\",\"className\":\"registration-details\"},{\"tag\":\"DIV\",\"id\":\"\",\"className\":\"form-panel\"},{\"tag\":\"FORM\",\"id\":\"registration\",\"className\":\"\"},{\"tag\":\"DIV\",\"id\":\"\",\"className\":\"field\"}]}"
+        },
+        {
+          "name": "accessibility: initial",
+          "pass": true,
+          "detail": "0 violations total; no serious/critical blockers. Review incomplete results manually."
+        },
+        {
+          "name": "flow: keyboard-navigation",
+          "pass": true,
+          "detail": "5 steps completed"
+        },
+        {
+          "name": "screenshot-flow-1",
+          "pass": true,
+          "detail": "mobile-flow-1.png"
+        },
+        {
+          "name": "flow: invalid-email",
+          "pass": true,
+          "detail": "4 steps completed"
+        },
+        {
+          "name": "screenshot-flow-2",
+          "pass": true,
+          "detail": "mobile-flow-2.png"
+        },
+        {
+          "name": "flow: registration",
+          "pass": true,
+          "detail": "4 steps completed"
+        },
+        {
+          "name": "screenshot-flow-3",
+          "pass": true,
+          "detail": "mobile-flow-3.png"
+        },
+        {
+          "name": "screenshot-after",
+          "pass": true,
+          "detail": "mobile-after.png"
+        },
+        {
+          "name": "layout: after-flows",
+          "pass": false,
+          "detail": "{\"width\":390,\"scroll\":740,\"offenders\":[{\"tag\":\"A\",\"id\":\"\",\"className\":\"skip\"},{\"tag\":\"DIV\",\"id\":\"\",\"className\":\"wrap\"},{\"tag\":\"HEADER\",\"id\":\"\",\"className\":\"site-header\"},{\"tag\":\"A\",\"id\":\"\",\"className\":\"brand\"},{\"tag\":\"SPAN\",\"id\":\"\",\"className\":\"brand-mark\"},{\"tag\":\"I\",\"id\":\"\",\"className\":\"\"},{\"tag\":\"I\",\"id\":\"\",\"className\":\"\"},{\"tag\":\"I\",\"id\":\"\",\"className\":\"\"}]}"
+        },
+        {
+          "name": "accessibility: after-flows",
+          "pass": true,
+          "detail": "0 violations total; no serious/critical blockers. Review incomplete results manually."
+        },
+        {
+          "name": "javascript-errors",
+          "pass": true,
+          "detail": "No pageerror events observed"
+        }
+      ],
+      "screenshots": [
+        "mobile.png",
+        "mobile-flow-1.png",
+        "mobile-flow-2.png",
+        "mobile-flow-3.png",
+        "mobile-after.png"
+      ],
+      "accessibility": [
+        {
+          "stage": "initial",
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "aria-prohibited-attr",
+              "impact": "serious",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-prohibited-attr?application=axeAPI",
+              "targets": [
+                [
+                  "#worktable"
+                ]
+              ]
+            },
+            {
+              "id": "color-contrast",
+              "impact": "serious",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+              "targets": [
+                [
+                  ".event-line > span:nth-child(1)"
+                ],
+                [
+                  ".event-line > span:nth-child(3)"
+                ],
+                [
+                  "#hero-title > span:nth-child(1)"
+                ],
+                [
+                  "#hero-title > span:nth-child(2)"
+                ],
+                [
+                  ".hero-description"
+                ],
+                [
+                  ".primary[href$=\"#register\"]"
+                ],
+                [
+                  ".idea-note > .note-tag"
+                ],
+                [
+                  ".idea-note > h2"
+                ],
+                [
+                  ".idea-note > p"
+                ],
+                [
+                  ".prototype-note > .note-tag"
+                ],
+                [
+                  ".prototype-note > h2"
+                ],
+                [
+                  ".prototype-note > p"
+                ],
+                [
+                  ".show-note > .note-tag"
+                ],
+                [
+                  "#participant-initial"
+                ],
+                [
+                  "#show-heading"
+                ],
+                [
+                  "#hero-participant > .participant-name[data-participant-name=\"\"]"
+                ],
+                [
+                  ".hero-bottom > span"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "stage": "after-flows",
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "aria-prohibited-attr",
+              "impact": "serious",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-prohibited-attr?application=axeAPI",
+              "targets": [
+                [
+                  "#worktable"
+                ]
+              ]
+            },
+            {
+              "id": "color-contrast",
+              "impact": "serious",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+              "targets": [
+                [
+                  ".event-line > span:nth-child(1)"
+                ],
+                [
+                  ".event-line > span:nth-child(3)"
+                ],
+                [
+                  "#hero-title > span:nth-child(1)"
+                ],
+                [
+                  "#hero-title > span:nth-child(2)"
+                ],
+                [
+                  ".hero-description"
+                ],
+                [
+                  ".primary[href$=\"#register\"]"
+                ],
+                [
+                  ".idea-note > .note-tag"
+                ],
+                [
+                  ".idea-note > h2"
+                ],
+                [
+                  ".idea-note > p"
+                ],
+                [
+                  ".prototype-note > .note-tag"
+                ],
+                [
+                  ".prototype-note > h2"
+                ],
+                [
+                  ".prototype-note > p"
+                ],
+                [
+                  ".show-note > .note-tag"
+                ],
+                [
+                  "#participant-initial"
+                ],
+                [
+                  "#show-heading"
+                ],
+                [
+                  "#hero-participant > .participant-name[data-participant-name=\"\"]"
+                ],
+                [
+                  ".hero-bottom > span"
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "finishedAt": "2026-11-06T05:37:46.179Z"
+}

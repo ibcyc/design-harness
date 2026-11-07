@@ -1,0 +1,30 @@
+{
+  "url": "http://127.0.0.1:4173",
+  "timeoutMs": 10000,
+  "viewports": [
+    { "name": "desktop", "width": 1440, "height": 900 },
+    { "name": "mobile", "width": 390, "height": 844 }
+  ],
+  "requiredText": ["Build Night", "活動安排", "保留你的席位"],
+  "flows": [
+    { "name": "keyboard-navigation", "steps": [
+      { "action": "click", "selector": "#name" },
+      { "action": "press", "selector": "#name", "value": "Tab" },
+      { "action": "expectFocused", "selector": "#email" },
+      { "action": "press", "selector": "#email", "value": "Tab" },
+      { "action": "expectFocused", "selector": "button[type=submit]" }
+    ] },
+    { "name": "invalid-email", "steps": [
+      { "action": "fill", "selector": "#name", "value": "Demo Visitor" },
+      { "action": "fill", "selector": "#email", "value": "not-an-email" },
+      { "action": "click", "selector": "button[type=submit]" },
+      { "action": "expectText", "selector": "#feedback", "value": "請輸入有效的 Email" }
+    ] },
+    { "name": "registration", "steps": [
+      { "action": "fill", "selector": "#email", "value": "demo@example.com" },
+      { "action": "click", "selector": "button[type=submit]" },
+      { "action": "expectVisible", "selector": "#confirmation" },
+      { "action": "expectText", "selector": "#confirmation", "value": "報名示範完成" }
+    ] }
+  ]
+}
